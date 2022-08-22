@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import {Track, usePlaybackState} from 'react-native-track-player';
+import {Track} from 'react-native-track-player';
 import {useOnTogglePlayback} from '../../../hooks';
 import UIButton from '../UIButton';
 
@@ -26,8 +26,6 @@ export interface TrackInfoProps {
 }
 
 const TrackInfo = ({track}: TrackInfoProps) => {
-  const state = usePlaybackState();
-
   const onTogglePlayback = useOnTogglePlayback();
   return (
     <UIButton
